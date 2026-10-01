@@ -20,6 +20,14 @@ Cliente achète sur eBay ──► Frooition (intégration officielle TopDawg↔
 
 Le site web (`site/`) présente ta marque et envoie les clientes vers ta boutique eBay. Tu n'as donc qu'**un seul** système de commandes à faire tourner.
 
+## Règle de base : tout se passe aux États-Unis
+
+- **Langue** : le site, les annonces eBay et les politiques sont **en anglais seulement**.
+- **Clientes** : ventes et livraisons **aux États-Unis seulement** (50 États + adresses militaires APO/FPO). Aucune expédition internationale.
+- **Fournisseurs** : seulement des fournisseurs TopDawg qui **expédient depuis les États-Unis** (étape 4).
+- **Retours** : expédiés depuis une adresse américaine vers l'entrepôt américain du fournisseur.
+- **Ton entreprise** : pour vendre sur eBay.com comme entreprise américaine, il te faut une adresse, un numéro fiscal (EIN, ou ton SSN) et un compte bancaire **aux États-Unis**. Si tu habites ailleurs (au Canada, par exemple), il faut d'abord créer une LLC américaine et ouvrir un compte bancaire américain, sinon eBay versera tes paiements dans ton pays. Parle-en à un comptable avant de commencer.
+
 ---
 
 ## Étape 1 : TopDawg (environ 10 min)
@@ -30,13 +38,16 @@ Le site web (`site/`) présente ta marque et envoie les clientes vers ta boutiqu
 
 ## Étape 2 : eBay (environ 10 min)
 
-1. Crée un compte vendeur eBay au nom de **Honey Mommy** (compte professionnel) : ebay.com → *Sell*.
+1. Crée un compte vendeur **professionnel** au nom de **Honey Mommy** sur **ebay.com** (le site américain), avec une adresse et un compte bancaire américains.
 2. Abonne-toi à une **eBay Store** (le forfait Starter suffit pour commencer). Nom de la boutique : `honeymommy`.
 3. Ajoute ton logo (`site/assets/logo.png`) comme image de la boutique.
 4. Crée 3 politiques d'entreprise (*Account → Business policies*) :
-   - **Expédition** : livraison gratuite, délai de traitement de 2 jours ouvrables.
-   - **Retours** : 30 jours, acheteur paie le retour (ou gratuit si tu préfères).
+   - **Expédition** : *Domestic shipping* → livraison gratuite (Free Standard Shipping), délai de traitement de 2 jours ouvrables. *International shipping* → **No international shipping**.
+     Dans **Exclude shipping locations**, coche **Worldwide** (garde seulement les États-Unis, Alaska/Hawaï et APO/FPO compris).
+   - **Retours** : *Domestic returns* → 30 jours, acheteur paie le retour (ou gratuit si tu préfères). *International returns* → désactivé.
    - **Paiement** : paiement immédiat exigé.
+5. *Account → Shipping preferences* : **désactive eBay International Shipping** (anciennement Global Shipping Program). eBay l'active souvent par défaut, et sinon tes articles peuvent être revendus à l'étranger.
+6. Si l'option existe dans ton compte (*Buyer requirements* / *Blocked buyers*), bloque les acheteurs dont l'adresse est hors de ta zone d'expédition.
 
 ## Étape 3 : connecter TopDawg à eBay (environ 10 min)
 
@@ -46,21 +57,23 @@ Suis la vidéo officielle : [How to Integrate with eBay](https://topdawg.com/dro
 2. Dans Frooition, choisis les 3 politiques créées à l'étape 2.
 3. Colle le modèle `ebay/description-template.html` comme modèle de description (facultatif, mais ça donne une belle image de marque).
 4. Active **Auto order sync**, **Inventory sync** et **Tracking sync**.
+5. Vérifie que la langue des annonces est **English (US)** et la devise **USD**.
 
 ## Étape 4 : choisir les produits (environ 15 min, à faire une seule fois)
 
-Dans le catalogue TopDawg, filtre ces catégories et ajoute les produits à ta liste d'importation :
+TopDawg travaille avec des fournisseurs américains vérifiés. Si le catalogue offre un filtre d'emplacement d'entrepôt, mets-le sur **USA**. Ensuite, cherche ces catégories et ajoute les produits à ta liste d'importation :
 
-| Catégorie Honey Mommy | Mots-clés à chercher dans TopDawg |
+| Catégorie du site | Mots-clés à chercher dans TopDawg |
 |---|---|
-| Grossesse | maternity pillow, pregnancy pillow, belly band, stretch mark, maternity |
-| Allaitement | nursing pillow, breast pump, nursing bra, nursing cover, breast pad |
-| Vêtements bébé | baby onesie, newborn, swaddle, baby romper, baby socks |
-| Bain & soins | baby bath, hooded towel, baby lotion, baby brush |
-| Repas | baby bottle, bib, sippy cup, high chair, baby spoon |
-| Éveil & jouets | teether, rattle, play mat, baby mobile, crib toy |
+| Pregnancy | maternity pillow, pregnancy pillow, belly band, stretch mark, maternity |
+| Nursing | nursing pillow, breast pump, nursing bra, nursing cover, breast pad |
+| Baby clothing | baby onesie, newborn, swaddle, baby romper, baby socks |
+| Bath & care | baby bath, hooded towel, baby lotion, baby brush |
+| Feeding | baby bottle, bib, sippy cup, high chair, baby spoon |
+| Play & development | teether, rattle, play mat, baby mobile, crib toy |
 
 **Comment choisir un produit :**
+- Le fournisseur expédie **depuis les États-Unis** : vérifie l'adresse de l'entrepôt sur la fiche du fournisseur.
 - Note du fournisseur ≥ 4 étoiles et expédition en ≤ 2 jours.
 - Stock ≥ 20 unités.
 - Coût TopDawg + livraison d'au moins **20 $** : en dessous, le profit par vente est trop petit (voir le tableau plus bas).
