@@ -2,7 +2,7 @@ name: Publier le site
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/affectionate-goodall-li6e4w]
   workflow_dispatch:
 
 permissions:
