@@ -94,6 +94,20 @@
   .cat p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
   .cat .more { margin-top: auto; padding-top: 10px; font-weight: 700; color: var(--petal-dark); }
 
+  /* Products (filled automatically from products.json) */
+  #featured[hidden] { display: none; }
+  .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+  .product {
+    background: var(--card); border-radius: var(--radius); overflow: hidden; text-decoration: none;
+    display: flex; flex-direction: column; box-shadow: 0 10px 30px -20px rgba(74, 52, 38, .35);
+    transition: transform .2s ease;
+  }
+  .product:hover { transform: translateY(-4px); }
+  .product img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--cream-2); }
+  .product div { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .product h3 { font-family: "Nunito", sans-serif; font-size: .95rem; font-weight: 600; margin: 0; }
+  .product .price { margin-top: auto; font-weight: 700; color: var(--petal-dark); font-size: 1.1rem; }
+
   /* About */
   .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
   .about blockquote {
@@ -173,6 +187,16 @@
     </div>
   </section>
 
+  <section id="featured" hidden style="padding-top: 0;">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>New &amp; loved</h2>
+        <p>Fresh picks, shipped from US warehouses.</p>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
   <section class="about" id="histoire">
     <div class="wrap">
       <div>
@@ -242,6 +266,28 @@
     a.querySelector("p").textContent = c.description;
     grid.appendChild(a);
   });
+
+  // products.json is rewritten by the automation every 6 hours.
+  fetch("products.json")
+    .then(r => (r.ok ? r.json() : []))
+    .then(items => {
+      if (!items.length) return;
+      const list = document.getElementById("products");
+      items.slice(0, 12).forEach(p => {
+        const a = document.createElement("a");
+        a.className = "product";
+        a.href = p.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.innerHTML = `<img loading="lazy" alt=""><div><h3></h3><span class="price"></span></div>`;
+        a.querySelector("img").src = p.image;
+        a.querySelector("h3").textContent = p.title;
+        a.querySelector(".price").textContent = "$" + Number(p.price).toFixed(2);
+        list.appendChild(a);
+      });
+      document.getElementById("featured").hidden = false;
+    })
+    .catch(() => {});
 </script>
 </body>
 </html>

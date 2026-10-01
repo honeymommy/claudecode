@@ -1,0 +1,13 @@
+{
+  "name": "honey-mommy-automation",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "products": "node src/run.js products",
+    "orders": "node src/run.js orders",
+    "setup": "node src/setup.js",
+    "ebay-auth": "node src/ebay-auth.js"
+  }
+}
