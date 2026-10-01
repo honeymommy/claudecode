@@ -1,7 +1,7 @@
 // The only file to edit: put your store links here.
-// storeUrl = your eBay store (e.g. https://www.ebay.com/str/honeymommy)
+// storeUrl = your eBay seller page (https://www.ebay.com/usr/<eBay username>)
 window.HONEY_MOMMY = {
-  storeUrl: "https://www.ebay.com/str/honeymommy",
+  storeUrl: "https://www.ebay.com/usr/honeymommy",
   email: "infohoneymommy@gmail.com",
   categories: [
     { icon: "🤰", name: "Pregnancy", description: "Pregnancy pillows, belly bands and skin care.", url: "" },

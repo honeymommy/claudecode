@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   run:
-    # Stays off until the TopDawg variables are set (GUIDE.md, step 4).
+    # Stays off until the TopDawg variables are set (automation/GUIDE-PREMIER.md, step 4).
     if: vars.TOPDAWG_API_URL != ''
     runs-on: ubuntu-latest
     timeout-minutes: 30

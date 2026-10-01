@@ -1,6 +1,6 @@
 # Honey Mommy automation
 
-Runs on GitHub Actions (`.github/workflows/automation.yml`). Setup steps, in French, are in [`../GUIDE.md`](../GUIDE.md).
+Runs on GitHub Actions (`.github/workflows/automation.yml`). Only for the TopDawg Premier plan (API). Setup steps, in French: [`GUIDE-PREMIER.md`](GUIDE-PREMIER.md). Do not run it at the same time as Frooition.
 
 | Command | What it does |
 |---|---|
