@@ -55,10 +55,33 @@ Clique **Export / Push to eBay**.
 
 ---
 
-## Ce qui reste à toi (environ 10 min par jour)
-- Répondre aux messages des clientes sur eBay **en moins de 24 h** : active les notifications de l'application eBay.
-- Accepter les retours (TopDawg te donne l'adresse du fournisseur).
-- Une fois par semaine, jeter un œil aux commandes en retard dans eBay Seller Hub.
+## Pilote automatique : les réglages à faire une fois
+
+| # | Où | Réglage | Ce que ça règle tout seul |
+|---|---|---|---|
+| 1 | TopDawg → Billing | **Auto-pay** activé, avec une carte au plafond suffisant (ex. 500 $) | Les commandes partent sans toi |
+| 2 | Frooition | **Order sync + Inventory sync + Tracking sync + Price sync** | Commandes, stocks, prix et numéros de suivi |
+| 3 | eBay → Account → Selling preferences | **Use out-of-stock option : On** | Une annonce épuisée se cache, puis revient d'elle-même |
+| 4 | eBay → Account → Return preferences → Automation rules | **Accept returns automatically** + **Refund automatically when the item is received** | Les retours sans discussion |
+| 5 | eBay → Seller Hub → Feedback | **Automatic feedback : On** (« Thank you for shopping at Honey Mommy! ») | Les évaluations |
+| 6 | eBay → Payments → Payout settings | Versement **quotidien** automatique | Ton argent arrive tout seul |
+| 7 | eBay → Account → Communication preferences | Notifications **par texto** pour : messages, retours, litiges (*cases*) | Tu es avertie seulement quand il faut agir |
+| 8 | Gmail (infohoneymommy@gmail.com) → Settings → **Vacation responder : On** (sans date de fin) | Réponse automatique en anglais (texte ci-dessous) | Les courriels du site |
+| 9 | Téléphone | Appli **eBay** installée, notifications activées | Tout passe par là |
+
+**Réponse automatique Gmail (à copier) :**
+> Thank you for contacting Honey Mommy! 💛 Orders ship from US warehouses within 1–2 business days and arrive in 2–5 business days. Your tracking number is in your eBay order details. For returns, open a return request from your eBay purchase history and it will be approved automatically. We'll reply to any other question within 24 hours.
+
+## Ce qui ne peut pas être automatisé
+
+eBay et la loi obligent une vraie personne à gérer ces situations. Elles sont rares, et tu reçois un texto quand ça arrive :
+
+- **Litige ou « case »** (colis perdu, article non conforme) : il faut répondre en moins de 3 jours ouvrables, sinon eBay tranche contre toi et pénalise ton compte.
+- **Question d'une cliente** sur eBay : réponds en 1 ou 2 phrases.
+- **Commande bloquée chez TopDawg** (carte refusée, rupture de stock) : TopDawg t'envoie un courriel. Annule et rembourse dans eBay.
+- **Une fois par année** : tes impôts.
+
+**En pratique :** environ 15 minutes par semaine, plus un texto à traiter de temps en temps.
 
 ## Plus tard (seulement si ça marche bien)
 - Plus de 250 produits → abonnement eBay Store.
