@@ -84,6 +84,7 @@ eBay et la loi obligent une vraie personne à gérer ces situations. Elles sont 
 **En pratique :** environ 15 minutes par semaine, plus un texto à traiter de temps en temps.
 
 ## Plus tard (seulement si ça marche bien)
+- **Boutique Shopify avec codes promo d'influenceuses** → voir `shopify/PLAN.md`.
 - Plus de 250 produits → abonnement eBay Store.
 - Domaine `honeymommy.com` → environ 12 $/an.
 - Système d'automatisation sur mesure (dossier `automation/`, forfait Premier) → voir `automation/GUIDE-PREMIER.md`. **Jamais en même temps que Frooition.**

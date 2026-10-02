@@ -1,0 +1,82 @@
+/* Honey Mommy: paste in Online Store > Themes > Customize > Theme settings > Custom CSS.
+   Works with the free Dawn and Sense themes. */
+
+/* Softer, warmer cards */
+.card-wrapper .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-wrapper:hover .card {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -22px rgba(74, 52, 38, 0.45);
+}
+.card__heading {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Prices in brand pink, compare-at price discreet */
+.price-item--regular,
+.price-item--sale {
+  color: #c9706c;
+  font-weight: 700;
+}
+.price--on-sale .price-item--regular {
+  color: rgba(74, 52, 38, 0.55);
+  font-weight: 400;
+}
+
+/* Pill-shaped badges */
+.badge {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Buttons lift slightly on hover */
+.button,
+.shopify-payment-button__button {
+  transition: transform 0.15s ease;
+}
+.button:hover,
+.shopify-payment-button__button:hover {
+  transform: translateY(-2px);
+}
+
+/* Announcement bar: a little bolder */
+.announcement-bar__message {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Rounded media everywhere */
+.banner__media,
+.image-with-text__media,
+.collection-card-wrapper .card__media,
+.product__media-item {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+/* Product page: reassurance line under the price */
+.product__text {
+  background: #fbead4;
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+}
+
+/* Collapsible rows as soft cards */
+.product__accordion {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0 1rem;
+  margin-bottom: 0.6rem;
+  border: none;
+}
+
+/* Discount code field at checkout preview / cart */
+.cart__note textarea,
+.field__input {
+  border-radius: 12px;
+}
