@@ -49,7 +49,7 @@ Clique **Export / Push to eBay**.
 ### ⏱️ 27–30 min : mettre le site en ligne
 1. Dans `site/config.js`, remplace `honeymommy` dans `storeUrl` par **ton nom d'utilisateur eBay**.
 2. GitHub → dépôt → **Settings → Pages → Source : GitHub Actions**.
-3. Fusionne la branche dans `main`. Le site est en ligne quelques minutes plus tard.
+3. GitHub → **Actions → Publier le site → Run workflow**. Le site est en ligne quelques minutes plus tard.
 
 ✅ **C'est fini.** Les commandes, les paiements au fournisseur et les numéros de suivi se font tout seuls.
 
